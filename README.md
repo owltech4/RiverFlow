@@ -1,5 +1,5 @@
 # Overview:
-RiverFlow is a data pipeline solution designed to create a robust and efficient flow for data ingestion, storage, transformation, and visualization. Inspired by the fluidity and consistency of a river, RiverFlow connects various data sources, ensuring quality and accessibility at every stage of the process.
+RiverFlow is a data pipeline solution designed to create a robust and efficient flow for data ingestion, storage, transformation, and visualization. Inspired by the fluidity and consistency of a river, RiverFlow connects different data sources, ensuring quality and accessibility at every stage of the process.
 
 # Project Objective:
 Automate the process of extracting and transforming data from an API, storing it in a scalable and reliable environment (Amazon Redshift), and making strategic information available for analysis through Looker Studio.
