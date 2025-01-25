@@ -70,7 +70,7 @@ Visibility: Interactive dashboards in Looker Studio support faster and more data
 
 Reliability: Logs and monitoring ensure data is always accessible and accurate.
 
-Next Steps:
+# Next Steps:
 
 Set up API integration and validate data ingestion.
 
