@@ -10,7 +10,7 @@ def print_hello():
 default_args = {
     "owner": "airflow",
     "depends_on_past": False,
-    "start_date": datetime(2025, 3, 4),  # Ajuste para a data atual
+    "start_date": datetime(2025, 3, 4),  # Adjust for current date
     "retries": 1,
     "retry_delay": timedelta(minutes=5),
 }
@@ -19,7 +19,7 @@ with DAG(
     "hello_airflow",
     default_args=default_args,
     description="A simple DAG that prints Hello, Airflow!",
-    schedule_interval="*/5 * * * *",  # A cada 5 minutos
+    schedule_interval="*/5 * * * *",  # Each 5 minutes
     catchup=False,
 ) as dag:
 
@@ -28,5 +28,5 @@ with DAG(
         python_callable=print_hello,
     )
 
-    task_hello  # Define a única task na DAG
+    task_hello
 
