@@ -1,22 +1,20 @@
 # Overview:
-RiverFlow is a data pipeline solution designed to create a robust and efficient flow for data ingestion, storage, transformation, and visualization. Inspired by the fluidity and consistency of a river, RiverFlow connects different data sources, ensuring quality and accessibility at every stage of the process.
+RiverFlow is a data pipeline solution designed to create a robust and efficient flow for data ingestion, storage, transformation, and visualization. Inspired by the fluidity and consistency of a river, RiverFlow connects different data sources (In this moment using only CSV files stored in S# bucket), ensuring quality and accessibility at every stage of the process.
 
 # Project Objective:
-Automate the process of extracting and transforming data from an API, storing it in a scalable and reliable environment (Amazon Redshift), and making strategic information available for analysis through Looker Studio.
+Automate the process of extracting and transforming data from an API, storing it in a scalable and reliable environment (Amazon Redshift or PostgreSQL), and making strategic information available for analysis through Looker Studio or Tableau.
 
 # Key Components:
 
 Data Ingestion:
 
-Integration with an API to programmatically and continuously extract data.
 
-Ensures secure, timely, and resilient data collection.
+
+
 
 Storage:
 
-Extracted data will be stored in Amazon Redshift, leveraging its scalability and performance as a data warehouse solution.
 
-Tables will be organized into well-defined schemas (Raw, Staging, Gold) for better data management.
 
 Data Transformation:
 
@@ -35,6 +33,7 @@ Visualization:
 Integration with Looker Studio to create interactive dashboards that provide real-time insights.
 
 Ensures that the presented data is reliable and up to date.
+
 
 Pipeline Flow:
 
