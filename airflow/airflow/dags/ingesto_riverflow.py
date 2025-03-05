@@ -3,7 +3,7 @@ from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
 import subprocess
 
-# Definição dos argumentos padrão da DAG
+# Defining the args of the DAG
 default_args = {
     "owner": "airflow",
     "depends_on_past": False,
@@ -12,7 +12,7 @@ default_args = {
     "retry_delay": timedelta(minutes=5),
 }
 
-# Criando a DAG
+# Creating DAG
 dag = DAG(
     "riverflow_pipeline",
     default_args=default_args,
@@ -21,13 +21,13 @@ dag = DAG(
     catchup=False,
 )
 
-# Função para rodar a ingestão
+# Function to run the ingestion process
 def run_ingestion():
     subprocess.run(["python", "/opt/riverflow/ingestion/ingestion.py"], check=True)
 
-# Função para rodar o dbt
+# Function to run dbt
 def run_dbt():
-    subprocess.run(["dbt", "run"], cwd="/opt/riverflow/dbt", check=True)
+    subprocess.run(["dbt", "run", "--project-dir", "/opt/riverflow/riverflow_dbt"], check=True)
 
 # Task para rodar a ingestão
 ingestion_task = PythonOperator(
